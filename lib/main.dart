@@ -37,6 +37,24 @@ class MyApp extends StatelessWidget {
               height: 400,
               width:370,
               color: Colors.green,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                Container(
+                height: 400,
+                width:370,
+                child: const Image(image:AssetImage('assets/image2.jpg'),fit: BoxFit.cover,)
+                ),
+              Container(
+                height: 400,
+                width:370,
+                child: const Image(image:AssetImage('assets/image3.jpg'),fit: BoxFit.cover,)),
+              Container(
+              height: 400,
+              width:370,
+                  child: const Image(image:AssetImage('assets/image1.jpg'),fit: BoxFit.cover,))
+                ],
+              ),
             ),
             const SizedBox(height: 20),
             Container(
