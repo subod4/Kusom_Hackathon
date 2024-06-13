@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yantra/pages/qrGenerator.dart';
 import 'package:yantra/pages/reserve.dart';
+import 'package:yantra/pages/timing.dart';
 
 void main()
 {
@@ -87,7 +89,11 @@ class MyApp extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)
 
                     ),
-                      child: Center(child: Text("Generate Qr",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),))
+                      child: GestureDetector(
+                          onTap: (){
+                                      Navigator.push(context, MaterialPageRoute(builder:(context) => Generate()));
+                        },
+                          child: Center(child: Text("Generate Qr",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),)))
 
                   ),
                   const SizedBox(height: 20),
@@ -98,7 +104,11 @@ class MyApp extends StatelessWidget {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(20)
                     ),
-                      child: Center(child: Text("Time Session",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),))
+                      child: GestureDetector(
+                          onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder:(context) =>Timing()));
+                            },
+                          child: Center(child: Text("Time Session",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),)))
                   ),
                 ],
               )
