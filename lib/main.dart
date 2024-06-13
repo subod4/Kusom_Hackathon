@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yantra/pages/reserve.dart';
 
 void main()
 {
-  runApp(MyApp());
+  runApp(MaterialApp(home:MyApp()));
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(title: Text("KatPark")),
         body:
@@ -71,7 +71,12 @@ class MyApp extends StatelessWidget {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(20)
                     ),
-                    child: Center(child: Text("Reserve Spot",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),)),
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => Reserve()));
+                      },
+                        child: Center(child: Text("Reserve Spot",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),)),
+
                   ),
                   const SizedBox(height: 20),
                   Container(
@@ -105,9 +110,9 @@ class MyApp extends StatelessWidget {
 
 
     ])
-      )
+      );
 
-    );
+
   }
 }
 
