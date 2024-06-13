@@ -71,6 +71,7 @@ class MyApp extends StatelessWidget {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(20)
                     ),
+                    child: Center(child: Text("Reserve Spot",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),)),
                   ),
                   const SizedBox(height: 20),
                   Container(
@@ -79,7 +80,9 @@ class MyApp extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(20)
+
                     ),
+                      child: Center(child: Text("Generate Qr",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),))
 
                   ),
                   const SizedBox(height: 20),
@@ -90,6 +93,7 @@ class MyApp extends StatelessWidget {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(20)
                     ),
+                      child: Center(child: Text("Time Session",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),))
                   ),
                 ],
               )
