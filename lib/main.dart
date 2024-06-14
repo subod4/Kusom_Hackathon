@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:yantra/pages/qrGenerator.dart';
 import 'package:yantra/pages/reserve.dart';
 import 'package:yantra/pages/timing.dart';
@@ -16,6 +17,17 @@ class MyApp extends StatelessWidget {
     return  Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(title: Text("KatPark")),
+        bottomNavigationBar: BottomNavigationBar(
+          items:[
+            BottomNavigationBarItem(icon: Icon(Icons.home),
+            label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person),
+            label:'Person'),
+            BottomNavigationBarItem(icon: Icon(Icons.settings),
+            label:'Settings'
+            ),
+          ]
+        ),
         body:
         Column(
           children:[
@@ -34,9 +46,9 @@ class MyApp extends StatelessWidget {
                     child:Icon(Icons.search, color: Colors.white))]),
                         ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Container(
-              height: 400,
+              height: 370,
               width:370,
               color: Colors.green,
               child: ListView(
@@ -58,7 +70,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Container(
               height: 300,
               width:400,
@@ -80,7 +92,7 @@ class MyApp extends StatelessWidget {
                         child: Center(child: Text("Reserve Spot",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),)),
 
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   Container(
                     height: 50,
                     width:370,
@@ -96,7 +108,7 @@ class MyApp extends StatelessWidget {
                           child: Center(child: Text("Generate Qr",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),)))
 
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   Container(
                     height: 50,
                     width:370,
